@@ -1,0 +1,1129 @@
+/* We need to import BEBAS from Google Fonts. */
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue');
+/* We need to import OPEN SANS from Google Fonts. */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/* We need to set the font-family for the body to Open Sans. */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #FFFEF9;
+  color: #30303F;
+}
+
+.main__content{
+    min-height: calc(100vh - 387px);
+}
+
+.main__content.admin{
+    padding: 5rem 0;
+}
+
+/* Then we need to add BEBAS to all my headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', cursive;
+}
+
+h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h3{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h4{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h5{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h6{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.text__gold{
+    color: #ac9b48;
+}
+
+.text__light{
+    color: #FFF7D1;
+}
+
+p{
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+a{
+    color: #97883f;
+    text-decoration: underline;
+}
+
+hr{
+    border: 1px solid #97883f;
+    margin: 4rem 0;
+}
+
+a:hover{
+    color: #ac9b48;
+}
+
+.small{
+    font-size: 0.8rem;
+}
+
+.mt__2{
+    margin-top: 2rem;
+}
+.mt__4{
+    margin-top: 4rem;
+}
+.mt__6{
+    margin-top: 6rem;
+}
+
+.mb__2{
+    margin-bottom: 2rem;
+}
+.mb__4{
+    margin-bottom: 4rem;
+}
+.mb__6{
+    margin-bottom: 6rem;
+}
+
+.mr__2{
+    margin-right: 2rem;
+}
+.mr__4{
+    margin-right: 4rem;
+}
+.mr__6{
+    margin-right: 6rem;
+}
+
+.ml__2{
+    margin-left: 2rem;
+}
+.ml__4{
+    margin-left: 4rem;
+}
+.ml__6{
+    margin-left: 6rem;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.text__left{
+    text-align: left;
+}
+
+.text__center{
+    text-align: center;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.container.container-sm{
+    max-width: 900px;
+}
+
+.container.container-xs{
+    max-width: 600px;
+}
+
+/* header */
+.header{
+    background: #FFFEF9;
+    padding : 1rem 0;
+}
+
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo a{
+    text-decoration: none;
+    color: #30303F;
+}
+
+.header__logo h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.header__logo h1:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #30303F;
+}
+
+.header__nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.header__nav ul li{
+    margin-left: 1rem;
+}
+
+.header__nav ul li a,
+.header__nav ul li button{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    /* We need to set the font-family for the body to BEBAS */
+    font-family: 'Bebas Neue', cursive;
+    color: #30303F;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header__nav ul li.whatsapp{
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.header__nav ul li.whatsapp i{
+    color: #25D366;
+    font-size: 3rem;
+}
+
+/* cover */
+.cover{
+    width: 100%;
+    padding: 5rem 0;
+}
+
+.cover .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cover .cover__text{
+    width: 50%;
+    position: relative;
+    z-index: 3;
+}
+
+.cover .cover__text h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.cover__image{
+    width: 50%;
+    /* We need a padding on the left side of the image. */
+    padding-left: 3.5rem;
+    position: relative;
+}
+
+.cover__image__container{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-image: url('../img/jonathan_velazquez_macbook.JPG');
+}
+
+.cover__image::before{
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: -45px;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF7D1;
+    z-index: 1;
+}
+
+/* subcover */
+.sub__cover{
+    width: 100%;
+    padding: 5rem 0;
+    background: #FFFEF9;
+}
+
+.sub__cover .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub__cover__content{
+    width: 50%;
+    position: relative;
+    z-index: 3;
+}
+
+.sub__cover__image{
+    width: 50%;
+    /* We need a padding on the left side of the image. */
+    padding-left: 3.5rem;
+    position: relative;
+}
+
+.sub__cover__image::before{
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: -45px;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF7D1;
+    z-index: 1;
+}
+
+.sub__cover__image__container{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-image: url('../img/jonathan_velazquez_macbook_pro.JPG');
+}
+
+.sub__cover.start__project{
+    background: #30303F;
+    color: #fff;
+}
+
+
+/* buttons */
+.btn__primary{
+    background: #30303F;
+    color: #fff;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    /* We need to set the font-family for the body to BEBAS */
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.btn__secondary{
+    background: #FFFEF9;
+    color: #30303F;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    /* We need to set the font-family for the body to BEBAS */
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.btn__third{
+    background: #ac9b48;
+    color: #FFF;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    /* We need to set the font-family for the body to BEBAS */
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.btn__primary:hover{
+    background: #ac9b48;
+    color: #fff;
+}
+
+.btn__secondary:hover{
+    background: #ac9b48;
+    color: #fff;
+}
+
+.btn__third:hover{
+    background: #97883f;
+    color: #fff;
+}
+
+.btn__link{
+    background: transparent;
+    color: #30303F;
+    display: inline-block;
+    padding: 0.8rem 0;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    /* We need to set the font-family for the body to BEBAS */
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+/* social media icons */
+.social__media__icons{
+    display: flex;
+    list-style: none;
+    margin-top: 2.75rem;
+}
+
+.social__media__icons a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    /* We need to set the font-family for the body to BEBAS */
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    margin-right: 1rem;
+    color: #30303F;
+}
+
+/* overview */
+.overview{
+    padding: 5rem 0;
+    background-color: #30303F;
+}
+
+.overview__text{
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #FFF7D1;
+}
+
+.overview__text h3{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    line-height: 2.4rem;
+}
+
+.overview__tech__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.75rem;
+}
+
+.overview__tech__icons i{
+    font-size: 3.5rem;
+    margin-right: 1rem;
+    color: #FFF7D1;
+    opacity : 0.5;
+    margin: 0 1rem;
+}
+
+/* latest project */
+.latest__project{
+    padding: 5rem 0;
+    position: relative;
+}
+
+.latest__project:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 400px;
+    background-color: #FFF7D1;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.latest__project .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.latest__project .latest__project__image{
+    width: 50%;
+    /* We need a padding on the left side of the image. */
+    padding-right: 3.5rem;
+    position: relative;
+}
+
+.latest__project .latest__project__image__container{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.latest__project__image__container__2{
+    width: 500px;
+    height: 360px;
+    overflow: hidden;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 3;
+    top: 220px;
+    left: 140px;
+    /* Para este div necesitamos una sombra grande pero tenue, para que se vea como si estuviera detrás de la imagen. */
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+}
+
+.latest__project .latest__project__text{
+    width: 40%;
+    position: relative;
+    z-index: 3;
+    padding-left: 5rem;
+}
+
+
+/* commercial quote */
+.commercial__quote{
+    padding: 5rem 0;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+/* testimonials */
+.testimonials{
+    padding: 5rem 0;
+    background-color: #30303F;
+}
+
+.testimonials .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.testimonials .testimonial{
+    color: #FFF7D1;
+    padding: 2rem;
+}
+
+.testimonials .testimonial h4{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    line-height: 2.4rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.testimonials .testimonial h6{
+    font-size: 1rem;
+    text-transform: uppercase;
+    line-height: auto !important;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.testimonials .testimonial p{
+    font-size: .8rem;
+    line-height: 1.75rem;
+}
+
+.testimonials .testimonial a{
+    color: #FFF7D1;
+}
+
+.testimonials .customNextBtn{
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #FFF7D1;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.testimonials .customNextBtn:hover{
+    color: #ac9b48;
+}
+
+.testimonials .customPrevBtn{
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #FFF7D1;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.testimonials .customPrevBtn:hover{
+    color: #ac9b48;
+}
+
+/* footer */
+.footer{
+    padding: 5rem 0;
+    /* We need this background color #30303F but a little bit darker. */
+    background-color: #1F1F2E;
+    text-align: center;
+}
+
+.footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .footer__logo h1{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    line-height: 2.4rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    position: relative;
+}
+
+.footer .footer__logo h1:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #ac9b48;
+}
+
+.footer .footer__nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.footer .footer__nav ul li{
+    margin-right: 1rem;
+}
+
+.footer .footer__nav ul li a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    /* We need to set the font-family for the body to BEBAS */
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    color: #FFF7D1;
+}
+
+.footer .footer__nav ul li a:hover{
+    color: #fff;
+}
+
+.footer .footer__social__media__icons{
+    display: flex;
+    list-style: none;
+}
+
+.footer .footer__social__media__icons a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    /* We need to set the font-family for the body to BEBAS */
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    margin-right: 1rem;
+    color: #FFF7D1;
+}
+
+/* about me */
+.about__me{
+    padding: 5rem 0;
+    position: relative;
+}
+
+.about__me .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about__me__text{
+    width: 50%;
+    padding-right: 3.5rem;
+}
+
+.about__me__text p{
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.about__me__image{
+    width: 40%;
+    /* We need a padding on the left side of the image. */
+    padding-left: 3.5rem;
+    position: relative;
+}
+
+.about__me__image::before{
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: -45px;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF7D1;
+    z-index: 1;
+}
+
+.about__me__image__container{
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-image: url(../img/jonathan_velazquez.JPG);
+}
+
+/* my skills */
+.my__skills{
+    padding: 5rem 0;
+    position: relative;
+}
+
+.my__skills .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.my__skills__text{
+    width: 50%;
+    padding-right: 3.5rem;
+}
+
+.my__skills__text p{
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.my__skills__indicators ul li{
+    list-style: none;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.my__skills__indicators ul li label{
+    font-size: 1rem;
+    text-transform: uppercase;
+    line-height: auto !important;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #ac9b48;
+    display: block;
+}
+
+.my__skills__indicators ul li p{
+    font-size: .8rem;
+    line-height: 1.75rem;
+}
+
+/* motivational quote */
+.motivational__quote{
+    padding: 5rem 0;
+    position: relative;
+    background-color: #30303F;
+    background-image: url('../img/jonathan_velazquez_macbook.JPG');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.motivational__quote:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.motivational__quote .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+}
+
+.motivational__quote__text{
+    width: 50%;
+    padding-right: 3.5rem;
+    color: #FFF7D1;
+}
+
+
+/* Necesitamos los estilos para la sección de los detalles que contiene el paquete de páginas web. */
+.website__details{
+    padding: 5rem 0;
+    position: relative;
+    background-color: #30303F;
+    color : #FFF7D1;
+}
+
+.website__details .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.website__details__content{
+    width: 65%;
+    padding-right: 3.5rem;
+}
+
+.website__details__content ul.list{
+    list-style: none;
+    margin: 0;
+    margin-top: 4rem;
+    padding: 0;
+}
+
+.website__details__content ul.list li{
+    margin-bottom: 1rem;
+    position: relative;
+    font-size: .85rem;
+    padding-left: 2rem;
+}
+
+.website__details__content ul.list li i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    color: #ac9b48;
+}
+
+.website__details__features{
+    width: 30%;
+    padding-left: 3.5rem;
+}
+
+.website__details__features .feature{
+    margin-bottom: 2rem;
+    /* Necesitamos que cada feature este enmarcado con un borde grueso y color amarillo. */
+    border: 5px solid #ac9b48;
+    padding: 2rem;
+}
+
+.start__project{
+    padding: 5rem 0;
+    position: relative;
+    background-color: #30303F;
+    color : #FFF7D1;
+}
+
+.start__project .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.start__project__text{
+    width: 50%;
+    padding-right: 3.5rem;
+}
+
+.start__project__form{
+    width: 50%;
+    padding: 0;
+    background : #30303F;
+}
+
+.start__project__form__content form{
+    display: flex;
+    flex-direction: column;
+}
+
+.start__project__form__content form .form-group{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.start__project__form__content form label{
+    font-size: .85rem;
+    text-transform: uppercase;
+    line-height: auto !important;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #FFF7D1;
+    display: block;
+}
+
+.start__project__form__content form input:not([type="checkbox"]), 
+.start__project__form__content form textarea, 
+.start__project__form__content form select{
+    margin-bottom: 1rem;
+    padding: .85rem;
+    border: none;
+    border-radius: 0;
+    background-color: #FFF;
+    color: #30303F;
+    font-size: .85rem;
+    letter-spacing: 1px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.terms__and__conditions{
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.terms__and__conditions label{
+    margin: 0 !important;
+    text-transform: none !important;
+    margin-left: 1rem;
+}
+
+.terms__and__conditions input[type="checkbox"]{
+    margin: 0 .7rem 0 0;
+}
+
+.terms__and__conditions a{
+    color: #ac9b48;
+    text-decoration: underline;
+}
+
+.terms__and__conditions__text{
+    padding: 3rem 0;
+}
+
+.terms__and__conditions__text h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.terms__and__conditions__text p{
+    font-size: .8rem;
+    line-height: 1.75rem;
+}
+
+.login__form{
+    padding: 5rem 0;
+    position: relative;
+}
+
+.login__form form{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login__form form .form-group{
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.login__form form label{
+    font-size: .85rem;
+    text-transform: uppercase;
+    line-height: auto !important;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #ac9b48;
+    display: block;
+}
+
+.login__form form input:not([type="checkbox"]),
+.login__form form textarea,
+.login__form form select{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 0;
+    background-color: #FFF7D1;
+    color: #30303F;
+    font-size: 1rem;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.error{
+    color: #ba4848;
+    font-size: .8rem;
+    margin-top: .5rem;
+}
+
+.success{
+    color: #4eba48;
+    font-size: .8rem;
+}
+
+.admin__form label{
+    font-size: .85rem;
+    text-transform: uppercase;
+    line-height: auto !important;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #ac9b48;
+    display: block;
+}
+
+.admin__form input:not([type="checkbox"]),
+.admin__form textarea,
+.admin__form select{
+    margin-bottom: 1rem;
+    padding: .85rem;
+    border: none;
+    border-radius: 0;
+    background-color: #FFF7D1;
+    color: #30303F;
+    font-size: .85rem;
+    letter-spacing: 1px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead tr th{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-family: 'Bebas Neue', cursive;
+    text-align: left;
+    padding: .5rem 0;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.table tbody tr td{
+    font-size: 1rem;
+    padding: .45rem 0;
+    border-bottom: 1px solid #ac9b48;
+}
+
+.table .actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table .actions a,
+.table .actions button{
+    color: #ac9b48;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.img__md{
+    width: auto;
+    height: 140px;
+    object-fit: cover;
+}
