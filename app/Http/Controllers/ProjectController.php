@@ -26,7 +26,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view ('admin.projects.create');
     }
 
     /**
@@ -37,7 +37,35 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
-        //
+        $project = new Project();
+        $project->title = $request->title;
+        $project->description = $request->description;
+        $project->client = $request->client;
+        $project->link = $request->link;
+        $project->slug = Str::slug($request->title);
+        $project->cover = $this->upload_or_update_image($request, 'cover', $project->cover);
+        $project->image_1 = $this->upload_or_update_image($request, 'image_1', $project->image_1);
+        $project->image_2 = $this->upload_or_update_image($request, 'image_2', $project->image_2);
+        $project->image_3 = $this->upload_or_update_image($request, 'image_3', $project->image_3);
+
+        $project->save();
+
+        return redirect()->route('projects.show', $project)->with('status', 'Proyecto creado con éxito');
+    }
+
+    public function upload_or_update_image($request, $type, $image){
+        if ($request->hasFile($type)) {
+            // Obtenemos el archivo
+            $file = $request->file($type);
+            // Buscamos la extension del archivo
+            $extension = $file->getClientOriginalExtension();
+            // Subimos la imagen en la carpeta publica y obtenemos la ruta pero primero modificamos el nombre del archivo
+            $filename = Str::slug($request->title) . '-' . hexdec(uniqid()) . '.' . $extension;
+            $path = $file->storeAs('projects', $filename, 'projects');
+            return $path;
+        }else{
+            return $image;
+        }
     }
 
     /**
@@ -78,47 +106,13 @@ class ProjectController extends Controller
             'client' => $request->client,
             'link' => $request->link,
             'slug' => Str::slug($request->title),
+            'cover' => $this->upload_or_update_image($request, 'cover', $project->cover),
+            'image_1' => $this->upload_or_update_image($request, 'image_1', $project->image_1),
+            'image_2' => $this->upload_or_update_image($request, 'image_2', $project->image_2),
+            'image_3' => $this->upload_or_update_image($request, 'image_3', $project->image_3), 
         ]);
 
-        // Si el usuario sube una imagen de portada la actualizamos en el proyecto
-        if ($request->hasFile('cover')) {
-            // Subimos la imagen en la carpeta publica y obtenemos la ruta pero primero modificamos el nombre del archivo
-            $filename = Str::slug($request->title) . '-' . hexdec(uniqid()) . '.' . $request->cover->extension();
-            $path = $request->cover->storeAs('projects', $filename, 'projects');
-            $project->update([
-                'cover' => $path,
-            ]);
-        }
-
-        // Si el usuario sube la imagen 1 la actualizamos en el proyecto
-        if ($request->hasFile('image_1')) {
-            // Subimos la imagen en la carpeta publica y obtenemos la ruta pero primero modificamos el nombre del archivo
-            $filename = Str::slug($request->title) . '-' . hexdec(uniqid()) . '.' . $request->image_1->extension();
-            $path = $request->image_1->storeAs('projects', $filename, 'projects');
-            $project->update([
-                'image_1' => $path,
-            ]);
-        }
-
-        // Si el usuario sube la imagen 2 la actualizamos en el proyecto
-        if ($request->hasFile('image_2')) {
-            // Subimos la imagen en la carpeta publica y obtenemos la ruta pero primero modificamos el nombre del archivo
-            $filename = Str::slug($request->title) . '-' . hexdec(uniqid()) . '.' . $request->image_2->extension();
-            $path = $request->image_2->storeAs('projects', $filename, 'projects');
-            $project->update([
-                'image_2' => $path,
-            ]);
-        }
-
-        // Si el usuario sube la imagen 3 la actualizamos en el proyecto
-        if ($request->hasFile('image_3')) {
-            // Subimos la imagen en la carpeta publica y obtenemos la ruta pero primero modificamos el nombre del archivo
-            $filename = Str::slug($request->title) . '-' . hexdec(uniqid()) . '.' . $request->image_3->extension();
-            $path = $request->image_3->storeAs('projects', $filename, 'projects');
-            $project->update([
-                'image_3' => $path,
-            ]);
-        }
+        return redirect()->route('projects.show', $project)->with('status', 'Proyecto actualizado con éxito');
 
     }
 
@@ -130,6 +124,8 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+
+        return redirect()->route('projects.index')->with('success', 'Proyecto eliminado con éxito');
     }
 }

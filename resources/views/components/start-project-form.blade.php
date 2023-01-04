@@ -12,35 +12,55 @@
         <div class="start__project__form">
             <div class="start__project__form__content">
                 <!-- Necesitamos aqui un formulario donde pueda capturar el nombre completo, correo electrónico, un resumen de lo que quiere hacer y un select con las opciones de presupuesto. -->
-                <form action="" method="post">
+                <form action="{{ route('contact') }}" method="post">
+
+                    @csrf
+
                     <div class="form__group">
                         <label for="name">Nombre completo</label>
-                        <input type="text" name="name" id="name" placeholder="Escribe tu nombre completo" autofocus>
+                        <input type="text" name="name" id="name" placeholder="Escribe tu nombre completo" autofocus required>
+                        @error('name')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="form__group">
                         <label for="email">Correo electrónico</label>
-                        <input type="email" name="email" id="email" placeholder="Escribe tu correo electrónico">
+                        <input type="email" name="email" id="email" placeholder="Escribe tu correo electrónico" required>
+                        @error('email')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="form__group">
                         <label for="summary">Resumen de tu proyecto</label>
-                        <textarea name="summary" id="summary" cols="30" rows="4" placeholder="Escribe un resumen de tu proyecto"></textarea>
+                        <textarea name="summary" id="summary" cols="30" rows="4" placeholder="Escribe un resumen de tu proyecto" required></textarea>
+                        @error('summary')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="form__group">
                         <label for="budget">Presupuesto</label>
-                        <select name="budget" id="budget">
+                        <select name="budget" id="budget" required>
                             <option value="0-3000">Menos de $3,000 MXN</option>
                             <option value="3000-5000">$3,000 MXN - $5,000 MXN</option>
                             <option value="5000-10000">$5,000 MXN - $10,000 MXN</option>
                             <option value="10000-20000">$10,000 MXN - $20,000 MXN</option>
                             <option value="20000-0">$20,000 MXN - en adelante</option>
                         </select>
+                        @error('budget')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <!-- El usuario debe aceptar los términos y condiciones de la página web. -->
                     <div class="form__group terms__and__conditions">
-                        <input type="checkbox" name="terms" id="terms">
+                        <input type="checkbox" name="terms" id="terms" required>
                         <label for="terms">Acepto los <a href="{{ route('terms') }}">términos y condiciones</a> de la página web</label>
                     </div>
+                    @error('terms')
+                        <div class="mt__1">
+                            <span class="error">{{ $message }}</span>
+                        </div>
+                    @enderror
 
                     <div>
                         <button type="submit" class="btn__third mt__2">

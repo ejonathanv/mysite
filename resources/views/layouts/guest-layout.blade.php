@@ -17,6 +17,9 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/133291f590.js" crossorigin="anonymous"></script>
 
+    <!-- ReCaptcha -->
+    {!! htmlScriptTagJsApi() !!}
+
 </head>
 
 <body>

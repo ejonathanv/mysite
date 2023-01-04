@@ -11,6 +11,7 @@
             Agregar proyecto
         </a>
 
+        @if($projects->count())
         <table class="table mt__2">
             <thead>
                 <tr>
@@ -33,5 +34,10 @@
                 @endforeach
             </tbody>
         </table>
+        @else
+            <div class="info mt__2">
+                No hay proyectos
+            </div>
+        @endif
     </div>
 </section>

@@ -1,3 +1,4 @@
+@if($project)
 <section class="latest__project">
     <div class="container">
         <div class="latest__project__image">
@@ -29,3 +30,4 @@
         </div>
     </div>
 </section>
+@endif

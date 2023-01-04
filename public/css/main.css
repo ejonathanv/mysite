@@ -714,6 +714,103 @@ a:hover{
     color: #FFF7D1;
 }
 
+/* projects */
+.website__projects{
+    padding: 3rem 0;
+    margin-top: 3rem;
+}
+
+.website__projects .container.recent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.website__projects .recent__project{
+    width: 100%;
+    background-color: #30303F;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    color: #FFF7D1;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.website__projects .recent__project:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #30303f97;
+}
+
+.website__projects .recent__project .recent__project__desc{
+    margin-top: auto;
+    width: 60%;
+    position: relative;
+    z-index: 2;
+}
+
+.website__projects .recent__project .recent__project__desc h1{
+    margin-bottom: 1rem;
+    color: #fff;
+    position: relative;
+}
+
+.website__projects .projects__grid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.website__projects .projects__grid .project__card{
+    width: 25%;
+    background-color: #30303F;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    color: #FFF7D1;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.website__projects .projects__grid .project__card:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #30303f97;
+}
+
+.website__projects .projects__grid .project__card .project__card__desc{
+    margin-top: auto;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.website__projects .projects__grid .project__card .project__card__desc h4{
+    margin-bottom: 1rem;
+    color: #fff;
+    position: relative;
+}
+
 /* about me */
 .about__me{
     padding: 5rem 0;
@@ -1039,9 +1136,7 @@ a:hover{
     border-radius: 0;
     background-color: #FFF7D1;
     color: #30303F;
-    font-size: 1rem;
-    font-family: 'Bebas Neue', cursive;
-    text-transform: uppercase;
+    font-size: .85rem;
     letter-spacing: 1px;
     width: 100%;
     box-sizing: border-box;
@@ -1126,4 +1221,8 @@ a:hover{
     width: auto;
     height: 140px;
     object-fit: cover;
+}
+
+.grecaptcha-badge{
+    z-index: 9999;
 }

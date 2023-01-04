@@ -11,7 +11,10 @@
             <ul>
                 <li><a href="{{ route('home') }}">Inicio</a></li>
                 <li><a href="{{ route('about') }}">Sobre mí</a></li>
-                <li><a href="{{ route('websites') }}">Páginas web</a></li>
+                @if (App\Models\Project::count() > 0)
+                    <li><a href="{{ route('projects') }}">Proyectos</a></li>
+                @endif
+                <li><a href="{{ route('websites') }}">Precios</a></li>
 
                 @auth
                     <li><a href="{{ route('admin') }}">Administración</a></li>

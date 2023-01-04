@@ -1,3 +1,4 @@
+@if($testimonial)
 <h3 class="mb__4">
     A continuación se muestra el testimonio más reciente.
 </h3>
@@ -22,3 +23,9 @@
 <a href="{{ route('testimonials.show', $testimonial) }}">
     Ver testimonio
 </a>
+@else
+<h4>No hay testimonios</h4>
+<a href="{{ route('testimonials.create') }}">
+    Agregar testimonio
+</a>
+@endif

@@ -1,3 +1,4 @@
+@if($testimonials->count())
 <section class="testimonials">
     <div class="container">
         <div class="owl-carousel">
@@ -31,3 +32,4 @@
         </a>
     </div>
 </section>
+@endif

@@ -17,15 +17,15 @@
                     <a href="{{ route('websites') }}">Páginas web</a>
                 </li>
                 <li>
-                    <a href="{{ route('terms') }}">Términos</a>
+                    <a href="{{ route('terms') }}">Términos y condiciones</a>
                 </li>
             </ul>
         </div>
         <div class="footer__social__media__icons">
-            <a href="https://www.facebook.com/jonathan.velazquez.355" target="_blank">
+            <a href="https://www.facebook.com/ejonathanv" target="_blank">
                 <i class="fab fa-facebook"></i>
             </a>
-            <a href="https://www.instagram.com/jonathanvelazquez/" target="_blank">
+            <a href="https://www.instagram.com/ejonathanv.dev" target="_blank">
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
