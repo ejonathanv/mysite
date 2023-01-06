@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     <!-- Main CSS -->
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/133291f590.js" crossorigin="anonymous"></script>

@@ -1,0 +1,145 @@
+/* Necesitamos que estos estilos se apliquen solo en version movil */
+@media only screen and (max-width: 600px) {
+
+    p {
+        font-size: .85rem;
+        line-height: 1.4rem;
+    }
+
+    .small {
+        font-size: .7rem;
+    }
+
+    .btn__primary {
+        display: block;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .header__logo h1 {
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .cover{
+        padding: 0 0 7.5rem 0;
+    }
+
+    .cover .cover__text h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    .cover .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cover .cover__text{
+        width: 100%;
+    }
+
+    .social__media__icons{
+        display: none;
+    }
+
+    .cover__image{
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    .overview{
+        padding: 2rem 0;
+    }
+
+    .overview__text {
+        position: relative;
+        z-index: 3;
+        text-align: left;
+        color: #FFF7D1;
+    }
+
+    .overview__text h3 {
+        font-size: 1rem;
+        text-transform: uppercase;
+        line-height: 2rem;
+    }
+
+    .overview__tech__icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2.75rem;
+    }
+
+    .overview__tech__icons i {
+        font-size: 1.8rem;
+        margin-right: 1rem;
+        color: #FFF7D1;
+        opacity: 0.5;
+        margin: 0;
+    }
+
+    .commercial__quote {
+        padding: 2rem 0;
+        margin-top: 0;
+        text-align: left;
+    }
+
+    .footer {
+        padding: 2rem 0;
+        background-color: #1F1F2E;
+        text-align: left;
+    }
+    .footer .container {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .footer .footer__nav ul {
+        list-style: none;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 1rem 0  ;
+        padding: 0;
+    }
+
+    .footer .footer__nav{
+        width: 100%;
+    }
+
+    .footer .footer__nav ul li {
+        margin-right: 0;
+    }
+
+    .footer .footer__nav ul li a {
+        font-size: .7rem;
+    }
+
+    .footer .footer__social__media__icons a {
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        font-family: 'Bebas Neue', cursive;
+        text-transform: uppercase;
+        color: #FFF7D1;
+    }
+
+    .footer .footer__social__media__icons {
+        margin-top: 1rem;
+    }
+
+    .credits{
+        margin: 1.2rem 0 0 0 !important;
+        font-size: .6rem;
+    }
+}

@@ -31,7 +31,7 @@
         </div>
     </div>
     <div class="container">
-        <p class="small text__light">
+        <p class="small text__light credits">
             &copy; Jonathan Velazquez 2020, Todos los derechos reservados.
         </p>
     </div>
