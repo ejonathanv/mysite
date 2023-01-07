@@ -11,11 +11,14 @@
         </div>
         <div class="start__project__form">
             <div class="start__project__form__content">
+                @if(session('success'))
+                    <h3>
+                        {{ session('success') }}
+                    </h3>
+                @endif
                 <!-- Necesitamos aqui un formulario donde pueda capturar el nombre completo, correo electrónico, un resumen de lo que quiere hacer y un select con las opciones de presupuesto. -->
                 <form action="{{ route('contact') }}" method="post">
-
                     @csrf
-
                     <div class="form__group">
                         <label for="name">Nombre completo</label>
                         <input type="text" name="name" id="name" placeholder="Escribe tu nombre completo" autofocus required>

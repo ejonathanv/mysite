@@ -56,7 +56,7 @@
                 Todos los proyectos comienzan desde $3,000 MXN en adelante.
             </h4>
 
-            <a href="{{ route('start') }}" class="btn__secondary mt__6">
+            <a href="{{ route('start') }}" class="btn__secondary mt__sm__2 mt__6">
                 ¡Comienza tu página web hoy mismo!
             </a>
         </div>

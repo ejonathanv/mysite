@@ -85,6 +85,8 @@ class SiteController extends Controller
         // Enviamos un correo al usuario con los datos en mail_data
         Mail::to($request->email)->send(new ThanksMessage($mail_data));
 
+        return back()->with('success', 'Hola ' . $request->name . ', tu mensaje ha sido enviado. Te responderé a la brevedad.');
+
     }
 
 }

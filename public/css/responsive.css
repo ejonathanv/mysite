@@ -10,9 +10,13 @@
         font-size: .7rem;
     }
 
-    .btn__primary {
+    .btn__primary, .btn__secondary {
         display: block;
         text-align: center;
+    }
+
+    .mt__sm__2{
+        margin-top: 1rem !important;
     }
 
     h1 {
@@ -26,6 +30,80 @@
 
     .header__nav {
         display: none;
+    }
+
+    .mobile__nav{
+        display: block;
+    }
+
+    .mobile__nav__icon {
+        font-size: 1.5rem;
+        color: #1F1F2E;
+        cursor: pointer;
+    }
+
+    .mobile__nav__menu__close {
+        position: absolute;
+        top: 28px;
+        right: 18px;
+        font-size: 1.5rem;
+        color: #1F1F2E;
+        cursor: pointer;
+    }
+
+    .mobile__nav__menu{
+        display: none;
+    }
+
+    .mobile__nav__menu.show{
+        display: flex;
+        position: fixed;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #FFFEF9;
+        z-index: 999;
+    }
+
+    .mobile__nav__menu ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mobile__nav__menu ul li {
+        margin: 1rem 0;
+    }
+
+    .mobile__nav__menu ul li a {
+        font-size: 1.5rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        font-family: 'Bebas Neue', cursive;
+        text-transform: uppercase;
+        color: #1F1F2E;
+    }
+
+    .mobile__whatsapp__btn{
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile__whatsapp__btn img{
+        width: 55px;
+        height: auto;
     }
 
     .cover{
@@ -54,6 +132,7 @@
     .cover__image{
         width: 100%;
         margin-top: 3rem;
+        padding: 0 !important;
     }
 
     .overview{
@@ -141,5 +220,127 @@
     .credits{
         margin: 1.2rem 0 0 0 !important;
         font-size: .6rem;
+    }
+
+    .about__me {
+        padding: 0;
+    }
+
+    .about__me .container {
+        flex-direction: column;
+    }
+
+    .about__me__text {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .about__me__image {
+        width: 100%;
+        padding-left: 0;
+        position: relative;
+        margin-top: 26px;
+    }
+
+    .my__skills{
+        padding: 5rem 0 2rem 0;
+    }
+
+    .my__skills .container {
+        flex-direction: column;
+    }
+
+    .my__skills__text {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .my__skills__indicators ul{
+        padding: 0;
+        margin: 0;
+    }
+
+    .motivational__quote {
+        background-attachment: scroll;
+    }
+
+    .motivational__quote__text {
+        width: 100%;
+        padding-right: 0;
+        color: #FFF7D1;
+    }
+
+    .sub__cover {
+        width: 100%;
+        padding: 0 0 7rem 0;
+        background: #FFFEF9;
+    }
+
+    .sub__cover .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .sub__cover__content {
+        width: 100%;
+        margin-bottom: 55px;
+    }
+
+    .sub__cover__image {
+        width: 100%;
+        padding-left: 0;
+        position: relative;
+    }
+
+    .website__details {
+        padding: 3rem 0 1rem 0;
+        position: relative;
+        background-color: #30303F;
+        color: #FFF7D1;
+    }
+
+    .website__details .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .website__details__content {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .website__details__features {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 52px;
+    }
+
+    .start__project__text {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .start__project__form {
+        width: 100%;
+        padding: 0;
+        background: #30303F;
+    }
+
+    .sub__cover.start__project {
+        background: #30303F;
+        color: #fff;
+        padding: 1rem 0 2rem 0;
+    }
+
+    .footer__nav{
+        display: none;
+    }
+
+    .footer__social__media__icons{
+        display: none !important;
     }
 }

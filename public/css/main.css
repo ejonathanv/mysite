@@ -14,6 +14,10 @@ body {
     min-height: calc(100vh - 387px);
 }
 
+.overflow-hidden{
+    overflow: hidden;
+}
+
 .main__content.admin{
     padding: 5rem 0;
 }
@@ -231,9 +235,14 @@ a:hover{
     margin-left: 2rem;
 }
 
-.header__nav ul li.whatsapp i{
-    color: #25D366;
-    font-size: 3rem;
+.header__nav ul li.whatsapp img{
+    width: 40px;
+    height: auto;
+    margin-right: 0.5rem;
+}
+
+.mobile__nav{
+    display: none;
 }
 
 /* cover */
@@ -1224,5 +1233,10 @@ a:hover{
 }
 
 .grecaptcha-badge{
+    display: none;
     z-index: 9999;
+}
+
+.mobile__whatsapp__btn{
+    display: none;
 }

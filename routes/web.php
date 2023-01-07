@@ -24,7 +24,7 @@ use App\Http\Controllers\TestimonialController;
 
 Route::get('/', [SiteController::class, 'index'])->name('home');
 Route::get('sobre-mi', [SiteController::class, 'about'])->name('about');
-Route::get('páginas-web', [SiteController::class, 'websites'])->name('websites');
+Route::get('paginas-web', [SiteController::class, 'websites'])->name('websites');
 Route::get('comienza-tu-pagina-web', [SiteController::class, 'start'])->name('start');
 Route::get('terminos-y-condiciones', [SiteController::class, 'terms'])->name('terms');
 Route::get('proyectos', [SiteController::class, 'projects'])->name('projects');

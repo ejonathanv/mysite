@@ -1,8 +1,11 @@
-new WOW().init();
+new WOW().init({
+    mobile: false
+});
 
 var app = {
     ready(){
         this.methods.testimonials_carousel();
+        this.methods.toggle_menu();
     },
     methods: {
         // Aqui activamos el carousel de los testimonios con OWL Carousel
@@ -38,6 +41,20 @@ var app = {
                 owl.trigger('prev.owl.carousel', [300]);
             });
 
+        },
+        // Toggle para el menu de navegacion en moviles
+        toggle_menu(){
+            $('.mobile__nav__icon').click(function(){
+                $('.mobile__nav__menu').toggleClass('show');
+                $('html, body').animate({ scrollTop: 0 }, 'fast');
+                $('body').toggleClass('overflow-hidden');
+            });
+
+            $('.mobile__nav__menu__close').click(function(){
+                $('.mobile__nav__menu').toggleClass('show');
+                $('html, body').animate({ scrollTop: 0 }, 'fast');
+                $('body').toggleClass('overflow-hidden');
+            });
         }
     }
 }
