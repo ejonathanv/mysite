@@ -40,6 +40,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
     Route::get('/', [AdminController::class, 'index'])->name('admin');
     Route::resource('testimonials', TestimonialController::class);
     Route::resource('projects', ProjectController::class);
+    Route::get('account', [AdminController::class, 'account'])->name('account');
+    Route::patch('account', [AdminController::class, 'update_account'])->name('account.update');
 });
 
 Route::middleware('auth')->group(function () {
