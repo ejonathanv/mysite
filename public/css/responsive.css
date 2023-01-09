@@ -336,6 +336,43 @@
         padding: 1rem 0 2rem 0;
     }
 
+    .latest__project {
+        padding: 1rem 0;
+        position: relative;
+    }
+
+    .latest__project .container {
+        flex-direction: column;
+    }
+
+    .latest__project .latest__project__image {
+        width: 100%;
+        padding-right: 0;
+        position: relative;
+        margin-bottom: 7rem;
+    }
+
+    .latest__project .latest__project__text {
+        width: 100%;
+        position: relative;
+        z-index: 3;
+        padding-left: 0;
+    }
+
+    .latest__project__image__container__2 {
+        width: 80%;
+        height: 300px;
+        overflow: hidden;
+        position: absolute;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 3;
+        top: 199px;
+        left: 40px;
+        box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+    }
+
     .footer__nav{
         display: none;
     }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use App\Mail\NewMessage;
 use App\Mail\ThanksMessage;
 use App\Models\Testimonial;
@@ -44,6 +45,11 @@ class SiteController extends Controller
     public function projects()
     {
         return view('site.projects');
+    }
+
+    public function project(Project $project)
+    {
+        return view('site.project', compact('project'));
     }
 
     public function contact(Request $request)

@@ -820,6 +820,18 @@ a:hover{
     position: relative;
 }
 
+.project__details{
+    padding: 3rem 0;
+}
+
+.project__details__image img{    
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 /* about me */
 .about__me{
     padding: 5rem 0;

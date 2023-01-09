@@ -18,7 +18,8 @@
                 {{ $project->description }}
             </p>
 
-            <a href="#" class="btn__primary mt__2">
+            <a href="{{ route('project', $project->slug) }}" 
+                class="btn__primary mt__2">
                 Ver proyecto
             </a>
 

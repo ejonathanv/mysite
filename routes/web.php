@@ -28,6 +28,7 @@ Route::get('paginas-web', [SiteController::class, 'websites'])->name('websites')
 Route::get('comienza-tu-pagina-web', [SiteController::class, 'start'])->name('start');
 Route::get('terminos-y-condiciones', [SiteController::class, 'terms'])->name('terms');
 Route::get('proyectos', [SiteController::class, 'projects'])->name('projects');
+Route::get('proyectos/{project:slug}', [SiteController::class, 'project'])->name('project');
 Route::get('ingresar', [SiteController::class, 'login'])->name('login');
 Route::redirect('/login', '/ingresar', 301);
 

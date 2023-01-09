@@ -14,7 +14,7 @@
                 @if (App\Models\Project::count() > 0)
                     <li><a href="{{ route('projects') }}">Proyectos</a></li>
                 @endif
-                <li><a href="{{ route('websites') }}">Precios</a></li>
+                <li><a href="{{ route('websites') }}">Comienza tu página web</a></li>
 
                 @auth
                     <li><a href="{{ route('admin') }}">Administración</a></li>
@@ -44,7 +44,7 @@
                     @if (App\Models\Project::count() > 0)
                         <li><a href="{{ route('projects') }}">Proyectos</a></li>
                     @endif
-                    <li><a href="{{ route('websites') }}">Precios</a></li>
+                    <li><a href="{{ route('websites') }}">Comienza tu página web</a></li>
 
                     @auth
                         <li><a href="{{ route('admin') }}">Administración</a></li>
