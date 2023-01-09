@@ -14,7 +14,7 @@
                     <a href="{{ route('about') }}">Sobre mí</a>
                 </li>
                 <li>
-                    <a href="{{ route('websites') }}">Comienza tu página web</a>
+                    <a href="{{ route('websites') }}">Páginas web</a>
                 </li>
                 <li>
                     <a href="{{ route('terms') }}">Términos y condiciones</a>
